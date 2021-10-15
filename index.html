@@ -12,28 +12,28 @@
 <body>
     <script src="projekti.js"></script>
     <h1>Smart Form: tehdyt asiat viikon aikana</h1>
-    <form action="#" id="form">
+    <form action="#" id="form" onsubmit="lisääYksi()">
         <fieldset>
             <legend>Lisää tapahtuma ja aika</legend>
             <label for="Aika">Aika</label>
-            <input type="number"></input>
+            <input type="number" required></input>
             <label for="Tapahtuma">Tapahtuma</label>
-            <select name="Tapahtumia" id="Tapahtuma" onchange="Itsesyöte()">
+            <select name="Tapahtumia" id="Tapahtuma" onchange="Itsesyöte()" required>
                 <option value="Opiskelua">Opiskelua</option>
                 <option value="Töissä">Töissä</option>
                 <option value="Treenissä">Treenissä</option>
                 <option value="Itse">Syötä itse</option>
             </select>
-            <input type="text" name="itse-tapahtuma" id="Itsesyöte" style="display: none;"></input>
+            <input type="text" name="itse-tapahtuma" id="Itses" style="display: none;"></input>
             <label for="Kategoria">Kategoria</label>
-            <select name="Kategoria-tyyppi">
+            <select name="Kategoria-tyyppi" required>
                 <option value="Opiskelu">Opiskelu</option>
                 <option value="Työ">Työ</option>
                 <option value="Treeni">Treeni</option>
                 <option value="Muu">Muu</option>
             </select>
             <br><br>
-            <input type="submit" value="Lisää tapahtuma"></input>
+            <input type="submit" value="Lisää tapahtuma" id="Lisää"></input>
         </fieldset>
     </form>
 
