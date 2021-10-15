@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <script src="projekti.js"></script>
-    <h1>AFafF</h1>
+    <h1>Smart Form: tehdyt asiat viikon aikana</h1>
+    <form action="#" id="form">
+        <fieldset>
+            <legend>Lisää tapahtuma ja aika</legend>
+            <label for="Aika">Aika</label>
+            <input type="number"></input>
+            <label for="Tapahtuma">Tapahtuma</label>
+            <select name="Tapahtumia" id="Tapahtuma" onchange="Itsesyöte()">
+                <option value="Opiskelua">Opiskelua</option>
+                <option value="Töissä">Töissä</option>
+                <option value="Treenissä">Treenissä</option>
+                <option value="Itse">Syötä itse</option>
+            </select>
+            <input type="text" name="itse-tapahtuma" id="Itsesyöte" style="display: none;"></input>
+            <label for="Kategoria">Kategoria</label>
+            <select name="Kategoria-tyyppi">
+                <option value="Opiskelu">Opiskelu</option>
+                <option value="Työ">Työ</option>
+                <option value="Treeni">Treeni</option>
+                <option value="Muu">Muu</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Lisää tapahtuma"></input>
+        </fieldset>
+    </form>
+
+    <h2>Tapahtumat kategorioittain!</h2>
+
 </body>
+
 </html>
