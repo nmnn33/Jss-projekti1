@@ -12,13 +12,13 @@
 <body>
     <script src="projekti.js"></script>
     <h1>Smart Form: tehdyt asiat viikon aikana</h1>
-    <form action="#" id="form" onsubmit="lisääYksi()">
+    <form action="#" id="form">
         <fieldset>
             <legend>Lisää tapahtuma ja aika</legend>
             <label for="Aika">Aika</label>
-            <input type="number" required></input>
+            <input type="number" id="num" required></input>
             <label for="Tapahtuma">Tapahtuma</label>
-            <select name="Tapahtumia" id="Tapahtuma" onchange="Itsesyöte()" required>
+            <select name="Tapahtumia" id="tapahtuma" onchange="Itsesyöte()" required>
                 <option value="Opiskelua">Opiskelua</option>
                 <option value="Töissä">Töissä</option>
                 <option value="Treenissä">Treenissä</option>
@@ -26,19 +26,32 @@
             </select>
             <input type="text" name="itse-tapahtuma" id="Itses" style="display: none;"></input>
             <label for="Kategoria">Kategoria</label>
-            <select name="Kategoria-tyyppi" required>
+            <select name="Kategoria-tyyppi" id="kategori" required>
                 <option value="Opiskelu">Opiskelu</option>
                 <option value="Työ">Työ</option>
                 <option value="Treeni">Treeni</option>
                 <option value="Muu">Muu</option>
             </select>
             <br><br>
-            <input type="submit" value="Lisää tapahtuma" id="Lisää"></input>
+            <input type="button" value="Lisää tapahtuma" id="Lisää" onclick="insertRows()"></input>
         </fieldset>
     </form>
 
     <h2>Tapahtumat kategorioittain!</h2>
-
+    
+    <button>Opiskelu</button>
+    <button>Työ</button>
+    <button>Treeni</button>
+    <button>Muu</button><br><br><br>
+    
+    <table id="taulu">
+        <tr>
+          <th>Aika</th>
+          <th>Tapahtuma</th>
+          <th>Kategoria</th>
+          <th>Poista</th>
+        <tr>
+        </table>
 </body>
 
 </html>
