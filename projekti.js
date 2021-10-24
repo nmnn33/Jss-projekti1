@@ -37,6 +37,7 @@ function insertRows() {
             solu2.innerHTML = tph.value;
         }
         solu3.innerHTML = kat.value;
+        solu3.classList.add(kat.value);
         solu4.innerHTML = "<button onclick='poisto(this)'>poista</button>";
     }
 }
@@ -49,15 +50,17 @@ function poisto(r) {
 
 //Kategorioittain piilotellaan/näytetään
 function näytäKaikki() {
-    var taulu = document.getElementById("taulu").getElementsByTagName('tbody')[0];
-    
+    var rivi = document.getElementById("tbodyid").getElementsByTagName("tr");    
+    for (let i=0; i <rivi.length; i++) {
+        rivi[i].style.display = "";
+    }
 }
 function piilotaAOpiskelu() {
     var rivi = document.getElementById("tbodyid").getElementsByTagName("tr");
-    solu = rivi.getElementsByTagName("td");
-    for (var i=0; rivi.length; i++) {
-        if (rivi[i].solu[2].value != "Opiskelu")
+    for (let i=0; i<rivi.length; i++) {
+        if (rivi[i].getElementsByClassName("Opiskelu") != true) {
         rivi[i].style.display = "none";
+        }
     }
 }
 function piilotaATyö() {
@@ -88,7 +91,6 @@ function terminoi() {
 //kun sivu latautuu, tuodaan localstoragessa oleva taulu esiin
 window.onload = function () {
     var taulu = document.getElementById("taulu");
-    console.log("locked and loaded");
     //if checkkaa onko localstoragesa mitään, jos ei, latautuu index.html sellaisenaan.
     if (localStorage.length > 0) {
         taulu.innerHTML = localStorage.getItem("data");
