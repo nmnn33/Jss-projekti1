@@ -1,3 +1,146 @@
-table, th, td {
-    border: 2px solid black;
+body {
+  font-family: Comic Sans MS;
+  background-image: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
+
+#keho {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+.otsikko {
+    font-family: 'Noto Serif', serif;
+    font-size: 2.4em;
+}
+/* Lomakkeelle css*/
+.lomake-container{
+    text-align: center;
+    color: rgba(182, 56, 56, 0.507);
+    margin-bottom: 100px;
+  }
+fieldset {
+    border: none;
+}
+/* Taulukolle css*/
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 2em;
+}
+thead tr {
+  background-color: #70d7c2;
+  color: #ffffff;
+  text-align: left;
+}
+th,
+td {
+  border-bottom: 1px solid #cad5dd;
+  padding: 10px 15px;
+}
+tbody tr:nth-of-type(even) {
+  background-color: #d7e4e1;
+}
+/* filt-luokan nappuloiden css*/
+.filtcontainer {
+  margin-left: 15%;
+}
+.filt {
+  font-size: 18px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow, transform;
+  background: radial-gradient(100% 100% at 100% 0%, #89e5ff 0%, #5468ff 100%);
+  box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%),
+    0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%),
+    inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+  padding: 0 2em;
+  border-radius: 0.3em;
+  color: #fff;
+  height: 2.6em;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.filt:hover {
+  box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%),
+    0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+  transform: translateY(-0.1em);
+}
+
+.filt:active {
+  box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+  transform: translateY(0em);
+}
+
+/* format-luokan button css*/
+.formatcontainer {
+  margin-left: 15%;
+}
+.format {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 12.5px;
+  background: #e0e0e0;
+  box-shadow: 16px 16px 18px #aaaaaa, -16px -16px 18px #ffffff;
+  text-align: center;
+}
+.format:active {
+  box-shadow: 16px 16px 18px #aaaaaa inset, -16px -16px 18px #ffffff inset;
+}
+
+/* Väliä span elementillä*/
+.freespan {
+  margin-left: 5px;
+}
+/* Poisto nappi css*/
+.delete {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  background: #e0e0e0;
+}
+.delete:active {
+  box-shadow: 16px 16px 18px #aaaaaa inset, -16px -16px 18px #ffffff inset;
+}
+/* Lisää nappi css*/
+#Lisää {
+	box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+	background-color:#bddbfa;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+#Lisää:hover {
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	background-color:#80b5ea;
+}
+#Lisää:active {
+	position:relative;
+	top:1px;
+}
+/*Counter css*/
+#counter-container {
+    margin-left: 15%;
+    display: inline-block
+}
+#counter {
+    font-size: 1.4em;
+    border:1px solid #84bbf3;
+    background-color:#bddbfa;
+
+}
+        
